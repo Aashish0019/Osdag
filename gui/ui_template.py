@@ -794,6 +794,8 @@ class Ui_ModuleWindow(QMainWindow):
                 l.setObjectName(option[0] + "_label")
                 l.setText(_translate("MainWindow", "<html><head/><body><p>" + lable + "</p></body></html>"))
                 out_layout2.addWidget(l, j, 1, 1, 1)
+                if option[0] == KEY_OUT_ANCHOR_BOLT_TENSION and module == KEY_DISP_BASE_PLATE:
+                    l.setVisible(False)
 
             if type == TYPE_TEXTBOX:
                 r = QtWidgets.QLineEdit(self.dockWidgetContents_out)
@@ -806,6 +808,8 @@ class Ui_ModuleWindow(QMainWindow):
                 r.setObjectName(option[0])
                 r.setReadOnly(True)
                 out_layout2.addWidget(r, j, 2, 1, 1)
+                if option[0] == KEY_OUT_ANCHOR_BOLT_TENSION and module == KEY_DISP_BASE_PLATE:
+                    r.setVisible(False)
 
             if type == TYPE_OUT_BUTTON:
                 v = option[3]
@@ -2209,6 +2213,7 @@ class Ui_ModuleWindow(QMainWindow):
             self.designPrefDialog.anchor_bolt_preferences(anchor_dia, anchor_typ)
             bp_material = tab_Base_Plate.findChild(QtWidgets.QWidget, KEY_BASE_PLATE_MATERIAL)
             bp_material.setText(str(material_grade))
+            bp_material.setReadOnly(True)
             bp_fu = tab_Base_Plate.findChild(QtWidgets.QWidget, KEY_BASE_PLATE_FU)
             bp_list.append(bp_fu)
             bp_fu.setText(str(material.fu))
