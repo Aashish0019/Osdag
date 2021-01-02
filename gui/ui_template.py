@@ -1657,7 +1657,7 @@ class Window(QMainWindow):
             return BeamCoverPlate
         elif name == KEY_DISP_BEAMCOVERPLATEWELD:
             return BeamCoverPlateWeld
-        elif name == KEY_DISP_BEAMENDPLATE:
+        elif name == KEY_DISP_BB_EP_SPLICE:
             return BeamBeamEndPlateSplice
         elif name == KEY_DISP_COLUMNENDPLATE:
             return ColumnEndPlate
@@ -1897,7 +1897,7 @@ class Window(QMainWindow):
                                                   KEY_DISP_ENDPLATE, KEY_DISP_BASE_PLATE, KEY_DISP_SEATED_ANGLE,
                                                   KEY_DISP_TENSION_BOLTED, KEY_DISP_TENSION_WELDED,
                                                   KEY_DISP_COLUMNCOVERPLATE,
-                                                  KEY_DISP_COLUMNCOVERPLATEWELD, KEY_DISP_COLUMNENDPLATE,KEY_DISP_BEAMENDPLATE,KEY_DISP_BCENDPLATE]:
+                                                  KEY_DISP_COLUMNCOVERPLATEWELD, KEY_DISP_COLUMNENDPLATE, KEY_DISP_BCENDPLATE]:
                 # print(self.display, self.folder, main.module, main.mainmodule)
                 print("common start")
                 self.commLogicObj = CommonDesignLogic(self.display, self.folder, main.module, main.mainmodule)
