@@ -58,7 +58,7 @@ class CADFillet(object): # not used in the current version as groove weld is pre
         self.beamRModel = None
         self.plateLModel = None
         self.plateRModel = None
-
+        self.module = module
 
         if self.module.endplate_type == 'Flushed - Reversible Moment':
             self.loc = float(outputobj['Stiffener']['Location'])
