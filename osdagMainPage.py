@@ -285,11 +285,15 @@ class OsdagMainWindow(QMainWindow):
                                 'Truss Connection' : self.Under_Development,
                                 },
                 'Tension Member' : [
-                            ('Bolted to End Gusset','ResourceFiles/images/bolted_ten.png','Tension_Bolted'),
-                            ('Welded to End Gusset','ResourceFiles/images/welded_ten.png','Tension_Welded'),
+                            ('Bolted to End Gusset','ResourceFiles/images/bolted_ten.png', 'Tension_Bolted'),
+                            ('Welded to End Gusset','ResourceFiles/images/welded_ten.png', 'Tension_Welded'),
                             self.show_tension_module,
                                    ],
-                'Compression Member' : self.Under_Development,
+                'Compression Member': [
+                            ('Bolted to End Gusset', 'ResourceFiles/images/bolted_ten.png', 'Compression_Bolted'),
+                            ('Welded to End Gusset', 'ResourceFiles/images/welded_ten.png', 'Compression_Welded'),
+                            self.show_compression_module,
+                                   ],
                 'Flexural Member' : self.Under_Development,
                 'Beam-Column' : self.Under_Development,
                 'Plate Girder' : self.Under_Development,
@@ -590,13 +594,13 @@ class OsdagMainWindow(QMainWindow):
         #         except OSError:
         #             shutil.rmtree(os.path.join(folder, create_folder))
         #             os.mkdir(os.path.join(root_path, create_folder))
-        if self.findChild(QRadioButton,'Compression_Bolted').isChecked():
+        if self.findChild(QRadioButton, 'Compression_Bolted').isChecked():
             self.hide()
             self.ui2 = Ui_ModuleWindow(Compression, ' ')
             self.ui2.show()
             self.ui2.closed.connect(self.show)
 
-        elif self.findChild(QRadioButton,'Compression_Welded').isChecked():
+        elif self.findChild(QRadioButton, 'Compression_Welded').isChecked():
             self.hide()
             self.ui2 = Ui_ModuleWindow(Compression, ' ')
             self.ui2.show()
