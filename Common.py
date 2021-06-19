@@ -343,6 +343,7 @@ KEY_DISP_COLUMNCOVERPLATEWELD = 'Column-to-Column Cover Plate Welded Connection'
 KEY_DISP_COLUMNENDPLATE = 'Column-to-Column End Plate Connection'
 KEY_DISP_BCENDPLATE = 'Beam-to-Column End Plate Connection'
 KEY_DISP_TENSION_BOLTED = 'Tension Member Design - Bolted to End Gusset'
+KEY_DISP_COMPRESSION_BOLTED = 'Compression Member Design - Bolted to End Gusset'
 KEY_DISP_TENSION_WELDED = 'Tension Member Design - Welded to End Gusset'
 KEY_DISP_COMPRESSION = 'Compression Member'
 KEY_DISP_BB_EP_SPLICE = 'Beam-to-Beam End Plate Connection'
@@ -388,11 +389,20 @@ KEY_SEC_PROFILE = 'Member.Profile'
 
 KEY_SHEAR = 'Load.Shear'
 KEY_AXIAL = 'Load.Axial'
+KEY_LOAD = 'Load.load'
+KEY_LOAD_TYPE = 'Load.load_type'
 KEY_MOMENT = 'Load.Moment'
+
+KEY_END_1_TRANS = 'End 1.translational freedom'
+KEY_END_2_TRANS = 'End 2.translational freedom'
+KEY_END_1_ROT = 'End 1.rotational freedom'
+KEY_END_2_ROT = 'End 2.rotational freedom'
 
 KEY_D = 'Bolt.Diameter'
 KEY_TYP = 'Bolt.Type'
 KEY_GRD = 'Bolt.Grade'
+KEY_NO_OF_BOLTS = 'Bolts.Number'
+KEY_END = 'Member.End'
 
 # KEY_DP_BOLT_MATERIAL_G_O = 'Bolt.Material_Grade_OverWrite'
 KEY_DP_BOLT_HOLE_TYPE = 'Bolt.Bolt_Hole_Type'
@@ -629,6 +639,9 @@ KEY_DISP_MOMENT = 'Bending Moment (kNm)'
 
 KEY_DISP_TOP_ANGLE = 'Top Angle'
 
+KEY_DISP_NO_OF_BOLTS = 'Number of Bolts'
+KEY_DISP_END = 'Member end condition'
+
 KEY_DISP_DIA_ANCHOR = 'Diameter(mm)'
 DISP_TITLE_BOLT = 'Bolt'
 DISP_TITLE_CRITICAL_BOLT = 'Critical Bolt Design'
@@ -667,15 +680,22 @@ KEY_DISP_FLANGE_PLATE_PITCH = 'Pitch Distance (mm)'
 KEY_DISP_FLANGE_PLATE_TEN_CAP ="Flange Plate Tension Capacity (kN)"
 DISP_TITLE_SECTION = 'Section Details'
 DISP_TITLE_TENSION_SECTION = 'Section Details'
+DISP_TITLE_COMPRESSION_SECTION = 'Section Details'
 SECTION_CLASSIFICATION = "Section Classification"
 
 KEY_DISP_D = 'Diameter (mm)'
 KEY_DISP_SHEAR = 'Shear Force (kN)'
 KEY_DISP_AXIAL = 'Axial Force (kN)'
 KEY_DISP_AXIAL_STAR = 'Axial (kN)* '
+KEY_DISP_LOAD_STAR = 'Load (kN)*'
 DISP_TITLE_PLATE = 'Plate'
 KEY_DISP_TYP = 'Type'
 KEY_DISP_TYP_ANCHOR = 'Anchor Type'
+KEY_DISP_LOAD_TYPE = 'Load Type'
+KEY_DISP_END_1_TRANS = 'End 1 translational constraint'
+KEY_DISP_END_2_TRANS = 'End 2 translational constraint'
+KEY_DISP_END_1_ROT = 'End 1 rotational constraint'
+KEY_DISP_END_2_ROT = 'End 2 rotational constraint'
 KEY_DISP_GRD_ANCHOR = 'Property Class'
 KEY_DISP_GRD_FOOTING = 'Grade*'
 KEY_DISP_GRD = 'Property Class'
@@ -1239,6 +1259,9 @@ KEY_TENSION_RUPTURECAPACITY = "Member.tension_rupture"
 KEY_DISP_TENSION_RUPTURECAPACITY = 'Tension Rupture Capacity (kN)'
 KEY_TENSION_BLOCKSHEARCAPACITY = "Member.tension_blockshear"
 KEY_DISP_TENSION_BLOCKSHEARCAPACITY = 'Block Shear Capacity (kN)'
+
+KEY_COMPRESSION_CAPACITY = 'Member.compression_capacity'
+KEY_DISP_COMPRESSION_CAPACITY = 'Compression capacity (kN)'
 
 KEY_SHEAR_YIELDCAPACITY = "Member.shear_yielding"
 KEY_SHEAR_RUPTURECAPACITY = "Member.shear_rupture"
